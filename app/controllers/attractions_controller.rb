@@ -22,6 +22,8 @@ class AttractionsController < ApplicationController
   end
 
   def update
+    @attraction = Attraction.find_by(id: params[:id])
+    @attraction.upate(attractions_params)
   end
   private
   def attractions_params
