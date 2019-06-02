@@ -25,7 +25,7 @@ class AttractionsController < ApplicationController
     @attraction = Attraction.find_by(id: params[:id])
     @attraction.upate!(attractions_params)
   end
-  
+
   private
   def attractions_params
     params.require(:attraction).permit(:name, :min_height, :nausea_rating, :happiness_rating, :tickets)
